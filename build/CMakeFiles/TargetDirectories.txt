@@ -1,6 +1,8 @@
 /home/shashwat-s/image-convolution-engine/build/CMakeFiles/imgcore.dir
 /home/shashwat-s/image-convolution-engine/build/CMakeFiles/imgconv.dir
 /home/shashwat-s/image-convolution-engine/build/CMakeFiles/test_image.dir
+/home/shashwat-s/image-convolution-engine/build/CMakeFiles/test_padding.dir
+/home/shashwat-s/image-convolution-engine/build/CMakeFiles/test_kernel.dir
 /home/shashwat-s/image-convolution-engine/build/CMakeFiles/test.dir
 /home/shashwat-s/image-convolution-engine/build/CMakeFiles/edit_cache.dir
 /home/shashwat-s/image-convolution-engine/build/CMakeFiles/rebuild_cache.dir

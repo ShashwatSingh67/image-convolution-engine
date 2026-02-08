@@ -165,6 +165,32 @@ test_image/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_image.dir/build.make CMakeFiles/test_image.dir/build
 .PHONY : test_image/fast
 
+#=============================================================================
+# Target rules for targets named test_padding
+
+# Build rule for target.
+test_padding: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_padding
+.PHONY : test_padding
+
+# fast build rule for target.
+test_padding/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_padding.dir/build.make CMakeFiles/test_padding.dir/build
+.PHONY : test_padding/fast
+
+#=============================================================================
+# Target rules for targets named test_kernel
+
+# Build rule for target.
+test_kernel: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_kernel
+.PHONY : test_kernel
+
+# fast build rule for target.
+test_kernel/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_kernel.dir/build.make CMakeFiles/test_kernel.dir/build
+.PHONY : test_kernel/fast
+
 src/cli/main.o: src/cli/main.cpp.o
 .PHONY : src/cli/main.o
 
@@ -188,6 +214,54 @@ src/cli/main.s: src/cli/main.cpp.s
 src/cli/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgconv.dir/build.make CMakeFiles/imgconv.dir/src/cli/main.cpp.s
 .PHONY : src/cli/main.cpp.s
+
+src/core/convolver.o: src/core/convolver.cpp.o
+.PHONY : src/core/convolver.o
+
+# target to build an object file
+src/core/convolver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgcore.dir/build.make CMakeFiles/imgcore.dir/src/core/convolver.cpp.o
+.PHONY : src/core/convolver.cpp.o
+
+src/core/convolver.i: src/core/convolver.cpp.i
+.PHONY : src/core/convolver.i
+
+# target to preprocess a source file
+src/core/convolver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgcore.dir/build.make CMakeFiles/imgcore.dir/src/core/convolver.cpp.i
+.PHONY : src/core/convolver.cpp.i
+
+src/core/convolver.s: src/core/convolver.cpp.s
+.PHONY : src/core/convolver.s
+
+# target to generate assembly for a file
+src/core/convolver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgcore.dir/build.make CMakeFiles/imgcore.dir/src/core/convolver.cpp.s
+.PHONY : src/core/convolver.cpp.s
+
+src/core/gaussian.o: src/core/gaussian.cpp.o
+.PHONY : src/core/gaussian.o
+
+# target to build an object file
+src/core/gaussian.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgcore.dir/build.make CMakeFiles/imgcore.dir/src/core/gaussian.cpp.o
+.PHONY : src/core/gaussian.cpp.o
+
+src/core/gaussian.i: src/core/gaussian.cpp.i
+.PHONY : src/core/gaussian.i
+
+# target to preprocess a source file
+src/core/gaussian.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgcore.dir/build.make CMakeFiles/imgcore.dir/src/core/gaussian.cpp.i
+.PHONY : src/core/gaussian.cpp.i
+
+src/core/gaussian.s: src/core/gaussian.cpp.s
+.PHONY : src/core/gaussian.s
+
+# target to generate assembly for a file
+src/core/gaussian.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgcore.dir/build.make CMakeFiles/imgcore.dir/src/core/gaussian.cpp.s
+.PHONY : src/core/gaussian.cpp.s
 
 src/core/image.o: src/core/image.cpp.o
 .PHONY : src/core/image.o
@@ -213,6 +287,30 @@ src/core/image.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgcore.dir/build.make CMakeFiles/imgcore.dir/src/core/image.cpp.s
 .PHONY : src/core/image.cpp.s
 
+src/core/kernel.o: src/core/kernel.cpp.o
+.PHONY : src/core/kernel.o
+
+# target to build an object file
+src/core/kernel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgcore.dir/build.make CMakeFiles/imgcore.dir/src/core/kernel.cpp.o
+.PHONY : src/core/kernel.cpp.o
+
+src/core/kernel.i: src/core/kernel.cpp.i
+.PHONY : src/core/kernel.i
+
+# target to preprocess a source file
+src/core/kernel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgcore.dir/build.make CMakeFiles/imgcore.dir/src/core/kernel.cpp.i
+.PHONY : src/core/kernel.cpp.i
+
+src/core/kernel.s: src/core/kernel.cpp.s
+.PHONY : src/core/kernel.s
+
+# target to generate assembly for a file
+src/core/kernel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgcore.dir/build.make CMakeFiles/imgcore.dir/src/core/kernel.cpp.s
+.PHONY : src/core/kernel.cpp.s
+
 tests/test_image.o: tests/test_image.cpp.o
 .PHONY : tests/test_image.o
 
@@ -237,6 +335,54 @@ tests/test_image.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_image.dir/build.make CMakeFiles/test_image.dir/tests/test_image.cpp.s
 .PHONY : tests/test_image.cpp.s
 
+tests/test_kernel.o: tests/test_kernel.cpp.o
+.PHONY : tests/test_kernel.o
+
+# target to build an object file
+tests/test_kernel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_kernel.dir/build.make CMakeFiles/test_kernel.dir/tests/test_kernel.cpp.o
+.PHONY : tests/test_kernel.cpp.o
+
+tests/test_kernel.i: tests/test_kernel.cpp.i
+.PHONY : tests/test_kernel.i
+
+# target to preprocess a source file
+tests/test_kernel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_kernel.dir/build.make CMakeFiles/test_kernel.dir/tests/test_kernel.cpp.i
+.PHONY : tests/test_kernel.cpp.i
+
+tests/test_kernel.s: tests/test_kernel.cpp.s
+.PHONY : tests/test_kernel.s
+
+# target to generate assembly for a file
+tests/test_kernel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_kernel.dir/build.make CMakeFiles/test_kernel.dir/tests/test_kernel.cpp.s
+.PHONY : tests/test_kernel.cpp.s
+
+tests/test_padding.o: tests/test_padding.cpp.o
+.PHONY : tests/test_padding.o
+
+# target to build an object file
+tests/test_padding.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_padding.dir/build.make CMakeFiles/test_padding.dir/tests/test_padding.cpp.o
+.PHONY : tests/test_padding.cpp.o
+
+tests/test_padding.i: tests/test_padding.cpp.i
+.PHONY : tests/test_padding.i
+
+# target to preprocess a source file
+tests/test_padding.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_padding.dir/build.make CMakeFiles/test_padding.dir/tests/test_padding.cpp.i
+.PHONY : tests/test_padding.cpp.i
+
+tests/test_padding.s: tests/test_padding.cpp.s
+.PHONY : tests/test_padding.s
+
+# target to generate assembly for a file
+tests/test_padding.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_padding.dir/build.make CMakeFiles/test_padding.dir/tests/test_padding.cpp.s
+.PHONY : tests/test_padding.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -249,15 +395,32 @@ help:
 	@echo "... imgconv"
 	@echo "... imgcore"
 	@echo "... test_image"
+	@echo "... test_kernel"
+	@echo "... test_padding"
 	@echo "... src/cli/main.o"
 	@echo "... src/cli/main.i"
 	@echo "... src/cli/main.s"
+	@echo "... src/core/convolver.o"
+	@echo "... src/core/convolver.i"
+	@echo "... src/core/convolver.s"
+	@echo "... src/core/gaussian.o"
+	@echo "... src/core/gaussian.i"
+	@echo "... src/core/gaussian.s"
 	@echo "... src/core/image.o"
 	@echo "... src/core/image.i"
 	@echo "... src/core/image.s"
+	@echo "... src/core/kernel.o"
+	@echo "... src/core/kernel.i"
+	@echo "... src/core/kernel.s"
 	@echo "... tests/test_image.o"
 	@echo "... tests/test_image.i"
 	@echo "... tests/test_image.s"
+	@echo "... tests/test_kernel.o"
+	@echo "... tests/test_kernel.i"
+	@echo "... tests/test_kernel.s"
+	@echo "... tests/test_padding.o"
+	@echo "... tests/test_padding.i"
+	@echo "... tests/test_padding.s"
 .PHONY : help
 
 

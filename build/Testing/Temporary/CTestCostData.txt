@@ -1,2 +1,4 @@
-test_image 1 0.00225101
+test_image 1 0.00172583
+test_padding 1 0.00164204
+test_kernel 1 0.00215575
 ---

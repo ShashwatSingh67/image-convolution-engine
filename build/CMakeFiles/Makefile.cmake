@@ -99,4 +99,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/imgcore.dir/DependInfo.cmake"
   "CMakeFiles/imgconv.dir/DependInfo.cmake"
   "CMakeFiles/test_image.dir/DependInfo.cmake"
+  "CMakeFiles/test_padding.dir/DependInfo.cmake"
+  "CMakeFiles/test_kernel.dir/DependInfo.cmake"
   )
