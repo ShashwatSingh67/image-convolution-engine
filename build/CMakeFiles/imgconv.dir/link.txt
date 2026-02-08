@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/imgconv.dir/src/cli/main.cpp.o -o imgconv  libimgcore.a 

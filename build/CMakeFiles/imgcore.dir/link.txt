@@ -1,0 +1,2 @@
+/usr/bin/ar qc libimgcore.a CMakeFiles/imgcore.dir/src/core/image.cpp.o
+/usr/bin/ranlib libimgcore.a

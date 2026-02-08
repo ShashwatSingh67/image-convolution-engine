@@ -1,0 +1,11 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/imgcore.dir/src/core/image.cpp.o"
+  "CMakeFiles/imgcore.dir/src/core/image.cpp.o.d"
+  "libimgcore.a"
+  "libimgcore.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/imgcore.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
