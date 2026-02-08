@@ -191,6 +191,43 @@ test_kernel/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_kernel.dir/build.make CMakeFiles/test_kernel.dir/build
 .PHONY : test_kernel/fast
 
+#=============================================================================
+# Target rules for targets named test_convolve2d
+
+# Build rule for target.
+test_convolve2d: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_convolve2d
+.PHONY : test_convolve2d
+
+# fast build rule for target.
+test_convolve2d/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_convolve2d.dir/build.make CMakeFiles/test_convolve2d.dir/build
+.PHONY : test_convolve2d/fast
+
+src/cli/io_stb.o: src/cli/io_stb.cpp.o
+.PHONY : src/cli/io_stb.o
+
+# target to build an object file
+src/cli/io_stb.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgconv.dir/build.make CMakeFiles/imgconv.dir/src/cli/io_stb.cpp.o
+.PHONY : src/cli/io_stb.cpp.o
+
+src/cli/io_stb.i: src/cli/io_stb.cpp.i
+.PHONY : src/cli/io_stb.i
+
+# target to preprocess a source file
+src/cli/io_stb.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgconv.dir/build.make CMakeFiles/imgconv.dir/src/cli/io_stb.cpp.i
+.PHONY : src/cli/io_stb.cpp.i
+
+src/cli/io_stb.s: src/cli/io_stb.cpp.s
+.PHONY : src/cli/io_stb.s
+
+# target to generate assembly for a file
+src/cli/io_stb.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgconv.dir/build.make CMakeFiles/imgconv.dir/src/cli/io_stb.cpp.s
+.PHONY : src/cli/io_stb.cpp.s
+
 src/cli/main.o: src/cli/main.cpp.o
 .PHONY : src/cli/main.o
 
@@ -263,6 +300,30 @@ src/core/gaussian.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgcore.dir/build.make CMakeFiles/imgcore.dir/src/core/gaussian.cpp.s
 .PHONY : src/core/gaussian.cpp.s
 
+src/core/gaussian2d.o: src/core/gaussian2d.cpp.o
+.PHONY : src/core/gaussian2d.o
+
+# target to build an object file
+src/core/gaussian2d.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgcore.dir/build.make CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.o
+.PHONY : src/core/gaussian2d.cpp.o
+
+src/core/gaussian2d.i: src/core/gaussian2d.cpp.i
+.PHONY : src/core/gaussian2d.i
+
+# target to preprocess a source file
+src/core/gaussian2d.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgcore.dir/build.make CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.i
+.PHONY : src/core/gaussian2d.cpp.i
+
+src/core/gaussian2d.s: src/core/gaussian2d.cpp.s
+.PHONY : src/core/gaussian2d.s
+
+# target to generate assembly for a file
+src/core/gaussian2d.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgcore.dir/build.make CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.s
+.PHONY : src/core/gaussian2d.cpp.s
+
 src/core/image.o: src/core/image.cpp.o
 .PHONY : src/core/image.o
 
@@ -310,6 +371,30 @@ src/core/kernel.s: src/core/kernel.cpp.s
 src/core/kernel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgcore.dir/build.make CMakeFiles/imgcore.dir/src/core/kernel.cpp.s
 .PHONY : src/core/kernel.cpp.s
+
+tests/test_convolve2d.o: tests/test_convolve2d.cpp.o
+.PHONY : tests/test_convolve2d.o
+
+# target to build an object file
+tests/test_convolve2d.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_convolve2d.dir/build.make CMakeFiles/test_convolve2d.dir/tests/test_convolve2d.cpp.o
+.PHONY : tests/test_convolve2d.cpp.o
+
+tests/test_convolve2d.i: tests/test_convolve2d.cpp.i
+.PHONY : tests/test_convolve2d.i
+
+# target to preprocess a source file
+tests/test_convolve2d.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_convolve2d.dir/build.make CMakeFiles/test_convolve2d.dir/tests/test_convolve2d.cpp.i
+.PHONY : tests/test_convolve2d.cpp.i
+
+tests/test_convolve2d.s: tests/test_convolve2d.cpp.s
+.PHONY : tests/test_convolve2d.s
+
+# target to generate assembly for a file
+tests/test_convolve2d.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_convolve2d.dir/build.make CMakeFiles/test_convolve2d.dir/tests/test_convolve2d.cpp.s
+.PHONY : tests/test_convolve2d.cpp.s
 
 tests/test_image.o: tests/test_image.cpp.o
 .PHONY : tests/test_image.o
@@ -394,9 +479,13 @@ help:
 	@echo "... test"
 	@echo "... imgconv"
 	@echo "... imgcore"
+	@echo "... test_convolve2d"
 	@echo "... test_image"
 	@echo "... test_kernel"
 	@echo "... test_padding"
+	@echo "... src/cli/io_stb.o"
+	@echo "... src/cli/io_stb.i"
+	@echo "... src/cli/io_stb.s"
 	@echo "... src/cli/main.o"
 	@echo "... src/cli/main.i"
 	@echo "... src/cli/main.s"
@@ -406,12 +495,18 @@ help:
 	@echo "... src/core/gaussian.o"
 	@echo "... src/core/gaussian.i"
 	@echo "... src/core/gaussian.s"
+	@echo "... src/core/gaussian2d.o"
+	@echo "... src/core/gaussian2d.i"
+	@echo "... src/core/gaussian2d.s"
 	@echo "... src/core/image.o"
 	@echo "... src/core/image.i"
 	@echo "... src/core/image.s"
 	@echo "... src/core/kernel.o"
 	@echo "... src/core/kernel.i"
 	@echo "... src/core/kernel.s"
+	@echo "... tests/test_convolve2d.o"
+	@echo "... tests/test_convolve2d.i"
+	@echo "... tests/test_convolve2d.s"
 	@echo "... tests/test_image.o"
 	@echo "... tests/test_image.i"
 	@echo "... tests/test_image.s"

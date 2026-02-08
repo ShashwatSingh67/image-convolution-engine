@@ -13,12 +13,13 @@ else()
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-# ---- Core library ----
+# ---- Core library (your convolution engine) ----
 add_library(imgcore STATIC
   src/core/image.cpp
   src/core/convolver.cpp
   src/core/kernel.cpp
   src/core/gaussian.cpp
+  src/core/gaussian2d.cpp
 )
 
 # Allow includes like: #include "core/image.h"
@@ -26,10 +27,12 @@ target_include_directories(imgcore PUBLIC
   ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
-# ---- CLI executable ----
+# ---- CLI executable (uses stb for IO) ----
 add_executable(imgconv
   src/cli/main.cpp
+  src/cli/io_stb.cpp
 )
+
 target_link_libraries(imgconv PRIVATE imgcore)
 
 # ---- Tests ----
@@ -52,3 +55,9 @@ add_executable(test_kernel
 )
 target_link_libraries(test_kernel PRIVATE imgcore)
 add_test(NAME test_kernel COMMAND test_kernel)
+
+add_executable(test_convolve2d
+  tests/test_convolve2d.cpp
+)
+target_link_libraries(test_convolve2d PRIVATE imgcore)
+add_test(NAME test_convolve2d COMMAND test_convolve2d)

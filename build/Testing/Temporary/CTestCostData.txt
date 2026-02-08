@@ -1,4 +1,5 @@
-test_image 1 0.00172583
-test_padding 1 0.00164204
-test_kernel 1 0.00215575
+test_image 1 0.00205659
+test_padding 1 0.00141489
+test_kernel 1 0.00230733
+test_convolve2d 1 0.00196713
 ---

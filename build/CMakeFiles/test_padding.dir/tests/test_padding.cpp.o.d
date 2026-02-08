@@ -184,4 +184,5 @@ CMakeFiles/test_padding.dir/tests/test_padding.cpp.o: \
  /usr/include/c++/11/bits/erase_if.h \
  /usr/include/c++/11/pstl/execution_defs.h \
  /home/shashwat-s/image-convolution-engine/src/core/padding.h \
- /home/shashwat-s/image-convolution-engine/src/core/convolver.h
+ /home/shashwat-s/image-convolution-engine/src/core/convolver.h \
+ /home/shashwat-s/image-convolution-engine/src/core/kernel.h

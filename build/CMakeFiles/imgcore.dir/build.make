@@ -125,12 +125,27 @@ CMakeFiles/imgcore.dir/src/core/gaussian.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imgcore.dir/src/core/gaussian.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shashwat-s/image-convolution-engine/src/core/gaussian.cpp -o CMakeFiles/imgcore.dir/src/core/gaussian.cpp.s
 
+CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.o: CMakeFiles/imgcore.dir/flags.make
+CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.o: ../src/core/gaussian2d.cpp
+CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.o: CMakeFiles/imgcore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shashwat-s/image-convolution-engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.o -MF CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.o.d -o CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.o -c /home/shashwat-s/image-convolution-engine/src/core/gaussian2d.cpp
+
+CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shashwat-s/image-convolution-engine/src/core/gaussian2d.cpp > CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.i
+
+CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shashwat-s/image-convolution-engine/src/core/gaussian2d.cpp -o CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.s
+
 # Object files for target imgcore
 imgcore_OBJECTS = \
 "CMakeFiles/imgcore.dir/src/core/image.cpp.o" \
 "CMakeFiles/imgcore.dir/src/core/convolver.cpp.o" \
 "CMakeFiles/imgcore.dir/src/core/kernel.cpp.o" \
-"CMakeFiles/imgcore.dir/src/core/gaussian.cpp.o"
+"CMakeFiles/imgcore.dir/src/core/gaussian.cpp.o" \
+"CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.o"
 
 # External object files for target imgcore
 imgcore_EXTERNAL_OBJECTS =
@@ -139,9 +154,10 @@ libimgcore.a: CMakeFiles/imgcore.dir/src/core/image.cpp.o
 libimgcore.a: CMakeFiles/imgcore.dir/src/core/convolver.cpp.o
 libimgcore.a: CMakeFiles/imgcore.dir/src/core/kernel.cpp.o
 libimgcore.a: CMakeFiles/imgcore.dir/src/core/gaussian.cpp.o
+libimgcore.a: CMakeFiles/imgcore.dir/src/core/gaussian2d.cpp.o
 libimgcore.a: CMakeFiles/imgcore.dir/build.make
 libimgcore.a: CMakeFiles/imgcore.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shashwat-s/image-convolution-engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libimgcore.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shashwat-s/image-convolution-engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libimgcore.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/imgcore.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/imgcore.dir/link.txt --verbose=$(VERBOSE)
 

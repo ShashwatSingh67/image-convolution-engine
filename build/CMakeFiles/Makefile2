@@ -68,6 +68,7 @@ all: CMakeFiles/imgconv.dir/all
 all: CMakeFiles/test_image.dir/all
 all: CMakeFiles/test_padding.dir/all
 all: CMakeFiles/test_kernel.dir/all
+all: CMakeFiles/test_convolve2d.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -80,6 +81,7 @@ clean: CMakeFiles/imgconv.dir/clean
 clean: CMakeFiles/test_image.dir/clean
 clean: CMakeFiles/test_padding.dir/clean
 clean: CMakeFiles/test_kernel.dir/clean
+clean: CMakeFiles/test_convolve2d.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -89,12 +91,12 @@ clean: CMakeFiles/test_kernel.dir/clean
 CMakeFiles/imgcore.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgcore.dir/build.make CMakeFiles/imgcore.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgcore.dir/build.make CMakeFiles/imgcore.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shashwat-s/image-convolution-engine/build/CMakeFiles --progress-num=3,4,5,6,7 "Built target imgcore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shashwat-s/image-convolution-engine/build/CMakeFiles --progress-num=4,5,6,7,8,9 "Built target imgcore"
 .PHONY : CMakeFiles/imgcore.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/imgcore.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shashwat-s/image-convolution-engine/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shashwat-s/image-convolution-engine/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/imgcore.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shashwat-s/image-convolution-engine/build/CMakeFiles 0
 .PHONY : CMakeFiles/imgcore.dir/rule
@@ -115,12 +117,12 @@ CMakeFiles/imgcore.dir/clean:
 CMakeFiles/imgconv.dir/all: CMakeFiles/imgcore.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgconv.dir/build.make CMakeFiles/imgconv.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgconv.dir/build.make CMakeFiles/imgconv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shashwat-s/image-convolution-engine/build/CMakeFiles --progress-num=1,2 "Built target imgconv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shashwat-s/image-convolution-engine/build/CMakeFiles --progress-num=1,2,3 "Built target imgconv"
 .PHONY : CMakeFiles/imgconv.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/imgconv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shashwat-s/image-convolution-engine/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shashwat-s/image-convolution-engine/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/imgconv.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shashwat-s/image-convolution-engine/build/CMakeFiles 0
 .PHONY : CMakeFiles/imgconv.dir/rule
@@ -141,12 +143,12 @@ CMakeFiles/imgconv.dir/clean:
 CMakeFiles/test_image.dir/all: CMakeFiles/imgcore.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_image.dir/build.make CMakeFiles/test_image.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_image.dir/build.make CMakeFiles/test_image.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shashwat-s/image-convolution-engine/build/CMakeFiles --progress-num=8,9 "Built target test_image"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shashwat-s/image-convolution-engine/build/CMakeFiles --progress-num=12,13 "Built target test_image"
 .PHONY : CMakeFiles/test_image.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_image.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shashwat-s/image-convolution-engine/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shashwat-s/image-convolution-engine/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_image.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shashwat-s/image-convolution-engine/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_image.dir/rule
@@ -167,12 +169,12 @@ CMakeFiles/test_image.dir/clean:
 CMakeFiles/test_padding.dir/all: CMakeFiles/imgcore.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_padding.dir/build.make CMakeFiles/test_padding.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_padding.dir/build.make CMakeFiles/test_padding.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shashwat-s/image-convolution-engine/build/CMakeFiles --progress-num=12,13 "Built target test_padding"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shashwat-s/image-convolution-engine/build/CMakeFiles --progress-num=16,17 "Built target test_padding"
 .PHONY : CMakeFiles/test_padding.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_padding.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shashwat-s/image-convolution-engine/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shashwat-s/image-convolution-engine/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_padding.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shashwat-s/image-convolution-engine/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_padding.dir/rule
@@ -193,12 +195,12 @@ CMakeFiles/test_padding.dir/clean:
 CMakeFiles/test_kernel.dir/all: CMakeFiles/imgcore.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_kernel.dir/build.make CMakeFiles/test_kernel.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_kernel.dir/build.make CMakeFiles/test_kernel.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shashwat-s/image-convolution-engine/build/CMakeFiles --progress-num=10,11 "Built target test_kernel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shashwat-s/image-convolution-engine/build/CMakeFiles --progress-num=14,15 "Built target test_kernel"
 .PHONY : CMakeFiles/test_kernel.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_kernel.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shashwat-s/image-convolution-engine/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shashwat-s/image-convolution-engine/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_kernel.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shashwat-s/image-convolution-engine/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_kernel.dir/rule
@@ -211,6 +213,32 @@ test_kernel: CMakeFiles/test_kernel.dir/rule
 CMakeFiles/test_kernel.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_kernel.dir/build.make CMakeFiles/test_kernel.dir/clean
 .PHONY : CMakeFiles/test_kernel.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_convolve2d.dir
+
+# All Build rule for target.
+CMakeFiles/test_convolve2d.dir/all: CMakeFiles/imgcore.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_convolve2d.dir/build.make CMakeFiles/test_convolve2d.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_convolve2d.dir/build.make CMakeFiles/test_convolve2d.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shashwat-s/image-convolution-engine/build/CMakeFiles --progress-num=10,11 "Built target test_convolve2d"
+.PHONY : CMakeFiles/test_convolve2d.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_convolve2d.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shashwat-s/image-convolution-engine/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_convolve2d.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shashwat-s/image-convolution-engine/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_convolve2d.dir/rule
+
+# Convenience name for target.
+test_convolve2d: CMakeFiles/test_convolve2d.dir/rule
+.PHONY : test_convolve2d
+
+# clean rule for target.
+CMakeFiles/test_convolve2d.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_convolve2d.dir/build.make CMakeFiles/test_convolve2d.dir/clean
+.PHONY : CMakeFiles/test_convolve2d.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

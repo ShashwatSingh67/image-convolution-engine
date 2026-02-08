@@ -1,10 +1,10 @@
-Start testing: Feb 08 16:01 ACDT
+Start testing: Feb 08 16:43 ACDT
 ----------------------------------------------------------
-1/3 Testing: test_image
-1/3 Test: test_image
+1/4 Testing: test_image
+1/4 Test: test_image
 Command: "/home/shashwat-s/image-convolution-engine/build/test_image"
 Directory: /home/shashwat-s/image-convolution-engine/build
-"test_image" start time: Feb 08 16:01 ACDT
+"test_image" start time: Feb 08 16:43 ACDT
 Output:
 ----------------------------------------------------------
 test_image passed
@@ -12,15 +12,15 @@ test_image passed
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"test_image" end time: Feb 08 16:01 ACDT
+"test_image" end time: Feb 08 16:43 ACDT
 "test_image" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/3 Testing: test_padding
-2/3 Test: test_padding
+2/4 Testing: test_padding
+2/4 Test: test_padding
 Command: "/home/shashwat-s/image-convolution-engine/build/test_padding"
 Directory: /home/shashwat-s/image-convolution-engine/build
-"test_padding" start time: Feb 08 16:01 ACDT
+"test_padding" start time: Feb 08 16:43 ACDT
 Output:
 ----------------------------------------------------------
 test_padding passed
@@ -28,15 +28,15 @@ test_padding passed
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"test_padding" end time: Feb 08 16:01 ACDT
+"test_padding" end time: Feb 08 16:43 ACDT
 "test_padding" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/3 Testing: test_kernel
-3/3 Test: test_kernel
+3/4 Testing: test_kernel
+3/4 Test: test_kernel
 Command: "/home/shashwat-s/image-convolution-engine/build/test_kernel"
 Directory: /home/shashwat-s/image-convolution-engine/build
-"test_kernel" start time: Feb 08 16:01 ACDT
+"test_kernel" start time: Feb 08 16:43 ACDT
 Output:
 ----------------------------------------------------------
 test_kernel passed
@@ -44,8 +44,24 @@ test_kernel passed
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"test_kernel" end time: Feb 08 16:01 ACDT
+"test_kernel" end time: Feb 08 16:43 ACDT
 "test_kernel" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Feb 08 16:01 ACDT
+4/4 Testing: test_convolve2d
+4/4 Test: test_convolve2d
+Command: "/home/shashwat-s/image-convolution-engine/build/test_convolve2d"
+Directory: /home/shashwat-s/image-convolution-engine/build
+"test_convolve2d" start time: Feb 08 16:43 ACDT
+Output:
+----------------------------------------------------------
+test_convolve2d passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test_convolve2d" end time: Feb 08 16:43 ACDT
+"test_convolve2d" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Feb 08 16:43 ACDT

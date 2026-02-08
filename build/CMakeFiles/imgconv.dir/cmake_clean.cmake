@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/imgconv.dir/src/cli/io_stb.cpp.o"
+  "CMakeFiles/imgconv.dir/src/cli/io_stb.cpp.o.d"
   "CMakeFiles/imgconv.dir/src/cli/main.cpp.o"
   "CMakeFiles/imgconv.dir/src/cli/main.cpp.o.d"
   "imgconv"

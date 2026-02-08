@@ -157,6 +157,7 @@ CMakeFiles/imgconv.dir/src/cli/main.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
+ /home/shashwat-s/image-convolution-engine/src/cli/io_stb.h \
  /home/shashwat-s/image-convolution-engine/src/core/image.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
@@ -182,4 +183,8 @@ CMakeFiles/imgconv.dir/src/cli/main.cpp.o: \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/bits/erase_if.h \
- /usr/include/c++/11/pstl/execution_defs.h
+ /usr/include/c++/11/pstl/execution_defs.h \
+ /home/shashwat-s/image-convolution-engine/src/core/gaussian2d.h \
+ /home/shashwat-s/image-convolution-engine/src/core/kernel.h \
+ /home/shashwat-s/image-convolution-engine/src/core/convolver.h \
+ /home/shashwat-s/image-convolution-engine/src/core/padding.h

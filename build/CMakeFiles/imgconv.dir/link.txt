@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/imgconv.dir/src/cli/main.cpp.o -o imgconv  libimgcore.a 
+/usr/bin/c++ CMakeFiles/imgconv.dir/src/cli/main.cpp.o CMakeFiles/imgconv.dir/src/cli/io_stb.cpp.o -o imgconv  libimgcore.a 
