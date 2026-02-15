@@ -6,13 +6,12 @@
 // Sample a pixel with padding rules applied.
 float sample_with_padding(const Image& img, int x, int y, int c, PaddingMode mode);
 
-/*
-Direct 2D convolution (baseline).
-
-For each output pixel (x,y,c):
-  out(x,y,c) = sum_{ky,kx}  in(x + (kx-rx), y + (ky-ry), c) * K(kx,ky)
-
-- K is a 2D kernel (odd width/height).
-- PaddingMode decides what happens when sampling goes outside the image.
-*/
+// Baseline: direct 2D convolution
 Image convolve2D_direct(const Image& in, const Kernel2D& kernel, PaddingMode mode);
+
+// 1D convolution passes (for separable filters)
+// Horizontal: apply Kernel1D along x direction
+Image convolve1D_horizontal(const Image& in, const Kernel1D& kernel, PaddingMode mode);
+
+// Vertical: apply Kernel1D along y direction
+Image convolve1D_vertical(const Image& in, const Kernel1D& kernel, PaddingMode mode);

@@ -4,18 +4,12 @@
 float sample_with_padding(const Image& img, int x, int y, int c, PaddingMode mode) {
     const int w = img.width();
     const int h = img.height();
-
-    // Padding only affects x/y; channel must still be valid.
     assert(c >= 0 && c < img.channels());
 
-    const bool in_bounds = (x >= 0 && x < w && y >= 0 && y < h);
-    if (in_bounds) {
+    if (x >= 0 && x < w && y >= 0 && y < h) {
         return img.at(x, y, c);
     }
-
-    if (mode == PaddingMode::Zero) {
-        return 0.0f;
-    }
+    if (mode == PaddingMode::Zero) return 0.0f;
 
     const int xr = reflect_index(x, w);
     const int yr = reflect_index(y, h);
@@ -23,7 +17,6 @@ float sample_with_padding(const Image& img, int x, int y, int c, PaddingMode mod
 }
 
 Image convolve2D_direct(const Image& in, const Kernel2D& kernel, PaddingMode mode) {
-    // Output has same dimensions as input.
     Image out(in.width(), in.height(), in.channels(), 0.0f);
 
     const int kw = kernel.width();
@@ -31,33 +24,61 @@ Image convolve2D_direct(const Image& in, const Kernel2D& kernel, PaddingMode mod
     const int rx = kernel.radius_x();
     const int ry = kernel.radius_y();
 
-    // For every pixel in the output...
     for (int y = 0; y < in.height(); y++) {
         for (int x = 0; x < in.width(); x++) {
             for (int c = 0; c < in.channels(); c++) {
-
                 float acc = 0.0f;
-
-                // ...accumulate weighted sum of neighbors.
-                //
-                // kx,ky are kernel coordinates (0..kw-1, 0..kh-1)
-                // We shift them by the radius to map to image offsets:
-                //   dx = kx - rx, dy = ky - ry
                 for (int ky = 0; ky < kh; ky++) {
                     const int dy = ky - ry;
                     for (int kx = 0; kx < kw; kx++) {
                         const int dx = kx - rx;
-
                         const float pix = sample_with_padding(in, x + dx, y + dy, c, mode);
-                        const float w = kernel.at(kx, ky);
-                        acc += pix * w;
+                        acc += pix * kernel.at(kx, ky);
                     }
                 }
-
                 out.at(x, y, c) = acc;
             }
         }
     }
+    return out;
+}
 
+Image convolve1D_horizontal(const Image& in, const Kernel1D& kernel, PaddingMode mode) {
+    Image out(in.width(), in.height(), in.channels(), 0.0f);
+    const int r = kernel.radius();
+
+    for (int y = 0; y < in.height(); y++) {
+        for (int x = 0; x < in.width(); x++) {
+            for (int c = 0; c < in.channels(); c++) {
+                float acc = 0.0f;
+                for (int k = 0; k < kernel.size(); k++) {
+                    const int dx = k - r;
+                    const float pix = sample_with_padding(in, x + dx, y, c, mode);
+                    acc += pix * kernel.at(k);
+                }
+                out.at(x, y, c) = acc;
+            }
+        }
+    }
+    return out;
+}
+
+Image convolve1D_vertical(const Image& in, const Kernel1D& kernel, PaddingMode mode) {
+    Image out(in.width(), in.height(), in.channels(), 0.0f);
+    const int r = kernel.radius();
+
+    for (int y = 0; y < in.height(); y++) {
+        for (int x = 0; x < in.width(); x++) {
+            for (int c = 0; c < in.channels(); c++) {
+                float acc = 0.0f;
+                for (int k = 0; k < kernel.size(); k++) {
+                    const int dy = k - r;
+                    const float pix = sample_with_padding(in, x, y + dy, c, mode);
+                    acc += pix * kernel.at(k);
+                }
+                out.at(x, y, c) = acc;
+            }
+        }
+    }
     return out;
 }

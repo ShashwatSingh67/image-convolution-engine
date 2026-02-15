@@ -153,6 +153,19 @@ imgconv/fast:
 .PHONY : imgconv/fast
 
 #=============================================================================
+# Target rules for targets named imgbench
+
+# Build rule for target.
+imgbench: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imgbench
+.PHONY : imgbench
+
+# fast build rule for target.
+imgbench/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgbench.dir/build.make CMakeFiles/imgbench.dir/build
+.PHONY : imgbench/fast
+
+#=============================================================================
 # Target rules for targets named test_image
 
 # Build rule for target.
@@ -204,12 +217,61 @@ test_convolve2d/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_convolve2d.dir/build.make CMakeFiles/test_convolve2d.dir/build
 .PHONY : test_convolve2d/fast
 
+src/bench/bench_main.o: src/bench/bench_main.cpp.o
+.PHONY : src/bench/bench_main.o
+
+# target to build an object file
+src/bench/bench_main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgbench.dir/build.make CMakeFiles/imgbench.dir/src/bench/bench_main.cpp.o
+.PHONY : src/bench/bench_main.cpp.o
+
+src/bench/bench_main.i: src/bench/bench_main.cpp.i
+.PHONY : src/bench/bench_main.i
+
+# target to preprocess a source file
+src/bench/bench_main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgbench.dir/build.make CMakeFiles/imgbench.dir/src/bench/bench_main.cpp.i
+.PHONY : src/bench/bench_main.cpp.i
+
+src/bench/bench_main.s: src/bench/bench_main.cpp.s
+.PHONY : src/bench/bench_main.s
+
+# target to generate assembly for a file
+src/bench/bench_main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgbench.dir/build.make CMakeFiles/imgbench.dir/src/bench/bench_main.cpp.s
+.PHONY : src/bench/bench_main.cpp.s
+
+src/bench/bench_metrics.o: src/bench/bench_metrics.cpp.o
+.PHONY : src/bench/bench_metrics.o
+
+# target to build an object file
+src/bench/bench_metrics.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgbench.dir/build.make CMakeFiles/imgbench.dir/src/bench/bench_metrics.cpp.o
+.PHONY : src/bench/bench_metrics.cpp.o
+
+src/bench/bench_metrics.i: src/bench/bench_metrics.cpp.i
+.PHONY : src/bench/bench_metrics.i
+
+# target to preprocess a source file
+src/bench/bench_metrics.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgbench.dir/build.make CMakeFiles/imgbench.dir/src/bench/bench_metrics.cpp.i
+.PHONY : src/bench/bench_metrics.cpp.i
+
+src/bench/bench_metrics.s: src/bench/bench_metrics.cpp.s
+.PHONY : src/bench/bench_metrics.s
+
+# target to generate assembly for a file
+src/bench/bench_metrics.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgbench.dir/build.make CMakeFiles/imgbench.dir/src/bench/bench_metrics.cpp.s
+.PHONY : src/bench/bench_metrics.cpp.s
+
 src/cli/io_stb.o: src/cli/io_stb.cpp.o
 .PHONY : src/cli/io_stb.o
 
 # target to build an object file
 src/cli/io_stb.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgconv.dir/build.make CMakeFiles/imgconv.dir/src/cli/io_stb.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgbench.dir/build.make CMakeFiles/imgbench.dir/src/cli/io_stb.cpp.o
 .PHONY : src/cli/io_stb.cpp.o
 
 src/cli/io_stb.i: src/cli/io_stb.cpp.i
@@ -218,6 +280,7 @@ src/cli/io_stb.i: src/cli/io_stb.cpp.i
 # target to preprocess a source file
 src/cli/io_stb.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgconv.dir/build.make CMakeFiles/imgconv.dir/src/cli/io_stb.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgbench.dir/build.make CMakeFiles/imgbench.dir/src/cli/io_stb.cpp.i
 .PHONY : src/cli/io_stb.cpp.i
 
 src/cli/io_stb.s: src/cli/io_stb.cpp.s
@@ -226,6 +289,7 @@ src/cli/io_stb.s: src/cli/io_stb.cpp.s
 # target to generate assembly for a file
 src/cli/io_stb.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgconv.dir/build.make CMakeFiles/imgconv.dir/src/cli/io_stb.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgbench.dir/build.make CMakeFiles/imgbench.dir/src/cli/io_stb.cpp.s
 .PHONY : src/cli/io_stb.cpp.s
 
 src/cli/main.o: src/cli/main.cpp.o
@@ -477,12 +541,19 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... imgbench"
 	@echo "... imgconv"
 	@echo "... imgcore"
 	@echo "... test_convolve2d"
 	@echo "... test_image"
 	@echo "... test_kernel"
 	@echo "... test_padding"
+	@echo "... src/bench/bench_main.o"
+	@echo "... src/bench/bench_main.i"
+	@echo "... src/bench/bench_main.s"
+	@echo "... src/bench/bench_metrics.o"
+	@echo "... src/bench/bench_metrics.i"
+	@echo "... src/bench/bench_metrics.s"
 	@echo "... src/cli/io_stb.o"
 	@echo "... src/cli/io_stb.i"
 	@echo "... src/cli/io_stb.s"

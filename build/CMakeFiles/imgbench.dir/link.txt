@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/imgbench.dir/src/bench/bench_main.cpp.o CMakeFiles/imgbench.dir/src/bench/bench_metrics.cpp.o CMakeFiles/imgbench.dir/src/cli/io_stb.cpp.o -o imgbench  libimgcore.a 
